@@ -32,7 +32,7 @@ class HackerRankTest extends Specification {
 
   def checkResult(expected: String): Boolean = {
     val result = outStream.toString.trim
-    result must_== expected
+    result === expected
   }
 
   def checkFileResult(expected: String): Boolean = {
@@ -42,6 +42,6 @@ class HackerRankTest extends Specification {
     val expectedResult = if (s.hasNext) s.next
     else ""
     val result = outStream.toString.trim
-    result must_== expectedResult
+    result === expectedResult
   }
 }
