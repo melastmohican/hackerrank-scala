@@ -17,4 +17,4 @@ scalacOptions in Test ++= Seq("-Yrangepos")
 
 resolvers ++= Seq("snapshots", "releases").map(Resolver.sonatypeRepo)
 
-initialCommands := "import org.example.hackerrank.hackerrankscala._"
+initialCommands := "import org.example.hackerrank._"
