@@ -1,5 +1,7 @@
 package org.example.hackerrank.fp
 
+import java.io.InputStream
+
 import org.example.hackerrank.HackerRankExecutable
 
 /**
@@ -29,8 +31,8 @@ import org.example.hackerrank.HackerRankExecutable
  *5
   */
 class SolveMeFirst extends HackerRankExecutable {
-    def execute(): Unit = {
-        println(io.Source.stdin.getLines().take(2).map(_.toInt).sum)
+    def execute(inStream: InputStream): Unit = {
+        println(io.Source.fromInputStream(inStream).getLines().take(2).map(_.toInt).sum)
     }
 
 }

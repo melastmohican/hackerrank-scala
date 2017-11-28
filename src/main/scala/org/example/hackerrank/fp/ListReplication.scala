@@ -1,5 +1,6 @@
 package org.example.hackerrank.fp
 
+import java.io.InputStream
 import java.util.Scanner
 
 import org.example.hackerrank.HackerRankExecutable
@@ -44,8 +45,8 @@ import org.example.hackerrank.HackerRankExecutable
 class ListReplication extends HackerRankExecutable {
   def f(num: Int, arr: List[Int]): List[Int] = arr.flatMap(e => List.fill(num)(e))
 
-  override def execute(): Unit = {
-    val sc = new Scanner(System.in)
+  override def execute(inStream: InputStream): Unit = {
+    val sc = new Scanner(inStream)
     val n = sc.nextInt
     val arr: List[Int] = (0 to n).map { e =>
       sc.nextInt.asInstanceOf[Int]

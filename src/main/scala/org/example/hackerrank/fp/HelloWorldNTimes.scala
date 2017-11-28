@@ -1,5 +1,6 @@
 package org.example.hackerrank.fp
 
+import java.io.InputStream
 import java.util.Scanner
 
 import org.example.hackerrank.HackerRankExecutable
@@ -36,8 +37,8 @@ Returns: nil
 class HelloWorldNTimes extends HackerRankExecutable {
   def f(n: Int) = (1 to n).foreach(e => println("Hello World"))
 
-  override def execute(): Unit = {
-    val sc = new Scanner(System.in)
+  override def execute(inStream: InputStream): Unit = {
+    val sc = new Scanner(inStream)
     val n = sc.nextInt
     f(n)
   }

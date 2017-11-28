@@ -20,8 +20,7 @@ trait HackerRankStringInSpec extends Specification {
   def check(expected: String): Boolean = {
     Console.withIn(inStream) {
       Console.withOut(outStream) {
-        System.setIn(inStream)
-        exec.execute()
+        exec.execute(inStream)
         val result = outStream.toString.trim
         result == expected
       }

@@ -1,5 +1,7 @@
 package org.example.hackerrank.fp
 
+import java.io.InputStream
+
 import org.example.hackerrank.HackerRankExecutable
 
 /**
@@ -22,7 +24,7 @@ import org.example.hackerrank.HackerRankExecutable
 class HelloWorld extends HackerRankExecutable {
   def f() = println("Hello World")
 
-  override def execute(): Unit = {
+  override def execute(inStream: InputStream): Unit = {
     f()
   }
 }

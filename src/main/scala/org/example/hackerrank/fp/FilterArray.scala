@@ -1,5 +1,6 @@
 package org.example.hackerrank.fp
 
+import java.io.InputStream
 import java.util.Scanner
 
 import org.example.hackerrank.HackerRankExecutable
@@ -55,8 +56,8 @@ class FilterArray extends HackerRankExecutable {
     result.toList
   }
 
-  override def execute(): Unit = {
-    val sc = new Scanner(System.in)
+  override def execute(inStream: InputStream): Unit = {
+    val sc = new Scanner(inStream)
     val delim = sc.nextInt
     val n = sc.nextInt
     val arr: List[Int] = (1 to n).map { e =>
