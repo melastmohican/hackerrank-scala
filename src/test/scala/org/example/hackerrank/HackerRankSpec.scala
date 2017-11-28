@@ -15,6 +15,7 @@ trait HackerRankStringInSpec extends Specification {
 
   def setIn(input: String): Unit = {
     inStream = new ByteArrayInputStream(input.getBytes)
+    outStream = new ByteArrayOutputStream
   }
 
   def check(expected: String): Boolean = {
